@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobilityshop | Tweedehands Fietsen en Accessoires</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #f8f8f8;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      max-width: 150px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    .slideshow {
+      width: 100%;
+      overflow: hidden;
+    }
+    .slideshow img {
+      width: 100%;
+    }
+    .content {
+      padding: 20px;
+    }
+    .product {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .product-item {
+      flex: 1 1 30%;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+    .product-item img {
+      max-width: 100%;
+      height: auto;
+    }
+    .footer {
+      background-color: #f8f8f8;
+      text-align: center;
+      padding: 10px;
+    }
+    .footer img {
+      max-width: 50px;
+      margin: 0 10px;
+    }
+    form {
+      margin: 20px 0;
+    }
+    form input, form textarea, form button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="your-logo.png" alt="Mobilityshop Logo">
+    <h1>Welkom bij Mobilityshop</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Webshop</a>
+    <a href="#">Fietsen</a>
+    <a href="#">Auto's</a>
+    <a href="#">Accessoires</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="slideshow">
+    <img src="fietsen-slide1.jpg" alt="Fietsen slideshow">
+  </div>
+
+  <div class="content">
+    <h2>Welkom bij onze (tweedehands) fietsen webshop!</h2>
+    <p>Bij ons vind je een uitgebreide selectie van kwalitatieve tweedehands fietsen en accessoires voor elk type rijder...</p>
+    <h3>Specialisatie in balansfietsen</h3>
+    <p>Een balansfiets voor volwassenen is ontworpen om evenwicht en mobiliteit te verbeteren...</p>
+
+    <h3>Onze producten:</h3>
+    <div class="product">
+      <div class="product-item">
+        <img src="fiets1.jpg" alt="Fiets 1">
+        <h4>Fiets 1</h4>
+        <p>Korte omschrijving van de fiets...</p>
+        <button onclick="toggleDescription(1)">Lees meer</button>
+        <p id="description1" style="display:none;">Uitgebreide beschrijving van fiets 1...</p>
+      </div>
+      <div class="product-item">
+        <img src="fiets2.jpg" alt="Fiets 2">
+        <h4>Fiets 2</h4>
+        <p>Korte omschrijving van de fiets...</p>
+        <button onclick="toggleDescription(2)">Lees meer</button>
+        <p id="description2" style="display:none;">Uitgebreide beschrijving van fiets 2...</p>
+      </div>
+    </div>
+
+    <h3>Betalingsmogelijkheden:</h3>
+    <p>Wij accepteren PayPal, iDEAL en Bitcoin.</p>
+
+    <h3>Contactformulier</h3>
+    <form action="#" method="POST" enctype="multipart/form-data">
+      <input type="text" name="naam" placeholder="Uw naam" required>
+      <input type="email" name="email" placeholder="Uw e-mail" required>
+      <textarea name="bericht" placeholder="Uw bericht" required></textarea>
+      <input type="file" name="bijlage">
+      <button type="submit">Verstuur</button>
+    </form>
+
+    <h3>Garantie en Bezorging</h3>
+    <ul>
+      <li>Fietsen worden geleverd met onderhoudsbeurt.</li>
+      <li>3 maanden garantie.</li>
+      <li>Professioneel gereinigd.</li>
+      <li>Bezorging mogelijk.</li>
+      <li>Niet gevonden wat je zoekt? Neem contact met ons op!</li>
+    </ul>
+  </div>
+
+  <footer class="footer">
+    <p>Inkoop en verkoop van fietsen</p>
+    <img src="paypal-logo.png" alt="PayPal">
+    <img src="ideal-logo.png" alt="iDEAL">
+    <img src="bitcoin-logo.png" alt="Bitcoin">
+    <img src="delivery-logo.png" alt="Delivery">
+  </footer>
+
+  <script>
+    function toggleDescription(id) {
+      var description = document.getElementById('description' + id);
+      if (description.style.display === 'none') {
+        description.style.display = 'block';
+      } else {
+        description.style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>
